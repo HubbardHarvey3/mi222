@@ -33,6 +33,7 @@ a, a:hover, a:visited, a:active {
 
 .icons {
     margin-left:20px;
+    align-items: center;
 }
 
 .pages {
