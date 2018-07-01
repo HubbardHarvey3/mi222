@@ -1,0 +1,39 @@
+/*Entire Site*/
+
+body {
+    margin:0;
+    padding:0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    font-size:23px;
+}
+
+ul {
+    list-style: none;
+}
+
+a, a:hover, a:visited, a:active {
+    color:inherit;
+    text-decoration: none !important;
+}
+
+/*Navbar*/
+
+.navbar, .icon {
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    height:9vh;
+}
+
+.icon {
+
+}
+
+.icon a{
+    padding:5px;
+}
+
+.navbar h6 {
+    font-size:.9em;
+}
