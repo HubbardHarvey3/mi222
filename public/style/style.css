@@ -8,6 +8,11 @@ body {
     font-size:23px;
 }
 
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
 ul {
     list-style: none;
 }
@@ -17,23 +22,25 @@ a, a:hover, a:visited, a:active {
     text-decoration: none !important;
 }
 
-/*Navbar*/
+/*----------------------Navbar---------------------------*/
 
-.navbar, .icon {
+.navbar {
     display:flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     height:9vh;
 }
 
-.icon {
-
+.icons {
+    margin-left:20px;
 }
 
-.icon a{
-    padding:5px;
+.pages {
+    width:40%;
+    display: flex;
+    justify-content: space-around;
+    margin-right:20px;
 }
 
-.navbar h6 {
-    font-size:.9em;
-}
+
+/*----------------------Jumbotron------------------------*/
