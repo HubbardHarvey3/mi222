@@ -6,7 +6,7 @@ app.set("view engine", "ejs");
 const CONTACT_ADDRESS = 'hubbard.harvey@hcubedcoder.com';
 
 app.get('/', function(req, res) {
-   res.send('Hello World') 
+   res.send('Hello Adrian, this is only the start.') 
 });
 
 
