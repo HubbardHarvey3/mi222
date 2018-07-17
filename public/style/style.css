@@ -67,3 +67,21 @@ nav:hover {
 }
 
 /*----------------------Jumbotron------------------------*/
+
+.blinker { 
+  animation-name: blinker;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(1,0,0,1);
+  animation-duration: .5s;
+  /*Basic styling  */
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  margin-left: 0px;
+  border-radius: 3px;
+  background: black;
+}
+
+@keyframes blinker { 
+  from { opacity: 1.0; } to { opacity: 0.0; }
+}
