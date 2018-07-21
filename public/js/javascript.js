@@ -2,7 +2,7 @@
     // Animated Jumbotron
 
 let i = 0;
-let txt = "Now I am playing around with an animated HEADER!!!  Also, look at the blinking cursor that follows the text!"
+let txt = "The Hernandez Family, Missionaries to Guatemala."
 let speed = 99;
 
 function animate () {
