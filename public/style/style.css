@@ -5,6 +5,7 @@ body {
     padding:0;
     overflow-x: hidden;
     font-size:23px;
+    font-family: 'PT Sans', sans-serif;
 }
 
 h6 {
@@ -53,12 +54,18 @@ nav:hover {
     padding-right: 5px;
 }
 
+.icons > a {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 .fa-2x:hover {
     color: skyblue;
     transform: scale(1.1);
 }
 
 .pages h6 {
+    font-family: 'Roboto', sans-serif;
     padding:5px;
     transition: ease all .5s;
     -webkit-transition: ease all .5s;
@@ -106,6 +113,7 @@ section.jumbo {
 }
 
 .jumbo > h1 {
+    font-family: 'Roboto', sans-serif;
     margin-bottom: 7px;
     
 }

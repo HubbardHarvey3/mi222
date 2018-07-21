@@ -12,6 +12,18 @@ app.get('/statment', function(req, res) {
    res.render('../public/views/SoF.ejs') 
 });
 
+app.get('/about', function(req, res) {
+   res.render('../public/views/about.ejs') 
+});
+
+app.get('/contact', function(req, res) {
+   res.render('../public/views/contact.ejs') 
+});
+
+app.get('/blog', function(req, res) {
+   res.render('../public/views/blog.ejs') 
+});
+
 app.listen(process.env.PORT, process.env.IP, function(){
    console.log("Blog server is spinning up");
 });
