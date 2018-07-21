@@ -4,9 +4,7 @@ body {
     margin:0;
     padding:0;
     overflow-x: hidden;
-    overflow-y: hidden;
     font-size:23px;
-    overflow: hidden;
 }
 
 h6 {
@@ -21,6 +19,11 @@ ul {
 a, a:hover, a:visited, a:active {
     color:inherit;
     text-decoration: none !important;
+}
+
+h1 {
+    margin:0;
+    padding:0;
 }
 
 /*----------------------Navbar---------------------------*/
@@ -102,13 +105,16 @@ section.jumbo {
     padding-left: 20px;
 }
 
+.jumbo > h1 {
+    margin-bottom: 7px;
+    
+}
+
 .jumboSub > img {
-    height:50vh;
     border:black solid 4px;
     -webkit-box-shadow: 10px 10px 33px 13px skyblue;
     -moz-box-shadow: 10px 10px 33px 13px skyblue;
     box-shadow: 10px 10px 33px 13px skyblue;
-    
 }
 
 .spacer {
@@ -137,6 +143,8 @@ section.jumbo {
     }
 }
 
+
+
 /*----------------Footer-----------------------------*/
 
 .footer {
@@ -146,8 +154,17 @@ section.jumbo {
     align-items: center;
     position: fixed;
     width:100%;
-    height: 10vh;
+    height: 9vh;
     bottom: 0;
     left: 0;
     background-color: skyblue
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+.siteContent {
+    margin-bottom: 10vh;
 }

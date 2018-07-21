@@ -5,9 +5,12 @@ app.set("view engine", "ejs");
 app.use(express.static(__dirname + '/public'))
 
 app.get('/', function(req, res) {
-   res.render('../public/index.ejs') 
+   res.render('../public/views/index.ejs') 
 });
 
+app.get('/statment', function(req, res) {
+   res.render('../public/views/SoF.ejs') 
+});
 
 app.listen(process.env.PORT, process.env.IP, function(){
    console.log("Blog server is spinning up");
