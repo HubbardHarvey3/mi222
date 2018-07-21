@@ -103,18 +103,26 @@ section.jumbo {
 }
 
 .jumboSub > img {
-    width:30%;
-    height:25%;
+    height:50vh;
     border:black solid 4px;
     -webkit-box-shadow: 10px 10px 33px 13px skyblue;
     -moz-box-shadow: 10px 10px 33px 13px skyblue;
     box-shadow: 10px 10px 33px 13px skyblue;
-    margin-right:25px;
+    
+}
+
+.spacer {
+    width:25%;
+}
+
+.jumboSub > h4 {
+    align-self: center;
+    margin-right: 20px;
 }
 
 .jumboSub {
     display: flex;
-    width:80vw;
+    justify-content: space-between;
     animation-name: fadeIn;
     animation-duration: 3s;
 }
