@@ -1,5 +1,22 @@
 <% include partials/header.ejs %>  
 
-<h1>Contact Page</h1>
+<section class="aboutp">
+    <h1>Please use the form below to contact us</h1>
+</section>
 
+<div id="contactForm">
+    <form method="post" action="">
+        <div class="email">
+            <label>Your Email</label>
+            <input type="text" name="from"></input>
+        </div>
+        <div class="message">
+            <label>Message</label>
+            <textarea type="text" name="message"></textarea>
+        </div>
+        <div>
+            <input id="mybutton" type="submit" value="Send Email">
+        </div>
+    </form>
+</div>
 <% include partials/footer.ejs %>  
