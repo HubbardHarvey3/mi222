@@ -1,0 +1,45 @@
+.bannerBlog {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    height:25vh;
+    background-image: url("../img/blog.jpg");
+    background-size: cover;
+    color: black;
+    
+}
+
+.bannerBlog > h1 {
+    font-family: 'Roboto', sans-serif;
+    margin-left:10px;
+    padding:9px;
+    align-self:center;
+    background-color: rgba(135, 206, 235, 0.9);
+    border-radius: 30px;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+}
+.blogText {
+    padding:10px;
+    margin-right:20%;
+    margin-left: 10%;
+}
+
+.blogText > h1, .blogText > h5 {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+.blogBreak {
+    border: 0;
+    height: 11px;
+    background-image: linear-gradient(to right, rgba(135, 206, 235, 0.9), rgba(135, 206, 235, 0.9), rgba(135, 206, 235, 0.9));
+}
+
+
+@media only screen and (max-width: 600px) {
+    .blogText {
+        
+        margin-right: 5px;
+        margin-left: 5px;  
+    }
+}
