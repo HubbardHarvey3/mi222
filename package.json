@@ -107,7 +107,9 @@
       "url": "https://github.com/nleush"
     }
   ],
-  "dependencies": {},
+  "dependencies": {
+    "express": "^4.16.3"
+  },
   "description": "Convert character encodings in pure javascript.",
   "devDependencies": {
     "async": "*",
