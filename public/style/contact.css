@@ -3,15 +3,22 @@
     justify-content: center;
     align-items: center;
     align-content: center;
-    border: black 3px solid;
+    border: rgba(0,0,0,0) 5px solid;
     border-radius: 20px;
     width:60vw;
     padding:30px;
+    -webkit-transition: ease all 1s;
+    -o-transition: ease all 1s;
+    transition: ease all 1s;
 }
 
 #border {
   display:flex;
   justify-content: center;
+}
+
+#contactForm:hover {
+  border:solid 5px skyblue;
 }
 
 form {
@@ -57,6 +64,13 @@ form {
 #mybutton:active {
 	position:relative;
 	top:1px;
+}
+
+#buttonContainer {
+  margin-top:20px
+}
+.message textarea{
+  height:20vh
 }
 
 .email, .message{
