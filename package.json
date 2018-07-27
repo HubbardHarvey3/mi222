@@ -154,7 +154,8 @@
   "scripts": {
     "coverage": "istanbul cover _mocha -- --grep .",
     "coverage-open": "open coverage/lcov-report/index.html",
-    "test": "mocha --reporter spec --grep ."
+    "test": "mocha --reporter spec --grep .",
+    "start": "node app.js"
   },
   "typings": "./lib/index.d.ts",
   "version": "0.4.19"
