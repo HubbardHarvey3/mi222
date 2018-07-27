@@ -1,6 +1,8 @@
 var express = require("express")
 
 var app = express()
+var port = process.env.PORT || 3000
+
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + '/public'))
 
@@ -24,6 +26,6 @@ app.get('/blog', function(req, res) {
    res.render('../public/views/blog.ejs')
 });
 
-app.listen(3000, function(){
+app.listen(port, function(){
    console.log("Blog server is spinning up");
 });

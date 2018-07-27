@@ -152,7 +152,6 @@
     "url": "git://github.com/ashtuchkin/iconv-lite.git"
   },
   "scripts": {
-    "start": "node app.js",
     "coverage": "istanbul cover _mocha -- --grep .",
     "coverage-open": "open coverage/lcov-report/index.html",
     "test": "mocha --reporter spec --grep ."
