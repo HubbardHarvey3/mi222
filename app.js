@@ -10,7 +10,7 @@ app.get('/', function(req, res) {
    res.render('../public/views/index.ejs')
 });
 
-app.get('/statment', function(req, res) {
+app.get('/statement', function(req, res) {
    res.render('../public/views/SoF.ejs')
 });
 

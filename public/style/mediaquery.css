@@ -1,0 +1,9 @@
+@media only screen and (max-width: 400px) {
+  #scrollTopContainer {
+    position:fixed;
+    right:400px;
+    height:50px;
+    bottom: 240px;
+    z-index: 1
+  }
+}
