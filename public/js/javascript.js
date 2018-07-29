@@ -19,6 +19,15 @@ scroll.addEventListener('click', function(){
    }
  })
 
+// Hamburger Drop Down
+
+let hamburger = document.getElementById('hamburger');
+let dropdownmenu = document.getElementById('dropdownmenu')
+
+hamburger.addEventListener('click', function(){
+  dropdownmenu.classList.toggle('showNav')
+  dropdownmenu.classList.toggle('hideNav')
+});
 
 
 // Animated Jumbotron

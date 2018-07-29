@@ -1,6 +1,7 @@
 /*Entire Site*/
 
 body {
+    color: #161925;
     margin:0;
     padding:0;
     overflow-x: hidden;
@@ -15,6 +16,10 @@ h6, h5, h2, h3, h4, h1 {
 
 ul {
     list-style: none;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
 }
 
 a, a:hover, a:visited, a:active {
@@ -32,14 +37,14 @@ nav {
 }
 
 nav:hover {
-    border-bottom:solid 5px skyblue;
+    border-bottom:solid 5px #87ceeb;
 }
 
 .navbar {
     display:flex;
     align-items: center;
     justify-content: space-between;
-    height:13vh;
+    height:13%;
 }
 
 .icons {
@@ -50,17 +55,16 @@ nav:hover {
 }
 
 .icons > a {
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-.fa-2x:hover {
-    color: skyblue;
-    transform: scale(1.1);
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-style: normal !important;
 }
 
 .pages h6 {
     font-family: 'Roboto', sans-serif;
+    font-weight: 100;
     padding:5px;
     transition: ease all .5s;
     -webkit-transition: ease all .5s;
@@ -68,16 +72,46 @@ nav:hover {
     border:solid transparent 2px;
 }
 .pages h6:hover {
-    border:solid skyblue 2px;
     transform: scale(1.1);
 }
 
 .pages {
-    width:45%;
+    width:65%;
     font-size: 1.5em;
     display: flex;
     justify-content: space-around;
     margin-right:20px;
+}
+
+#dropdown {
+  display:none;
+}
+
+#dropdownmenu > h6 {
+  margin:10px;
+}
+.showNav {
+  display: inline;
+}
+
+.hideNav {
+  display: none;
+}
+
+@media screen and (max-width: 991px) {
+  .icons {
+      display:none;
+  }
+  .pages {
+    display:none;
+  }
+  #dropdown {
+    display:flex;
+    flex-direction: column;
+    margin:10px;
+    padding:10px;
+  }
+
 }
 
 /*----------------------Jumbotron------------------------*/
