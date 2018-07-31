@@ -116,6 +116,8 @@ nav:hover {
 
 /*----------------------Jumbotron------------------------*/
 
+
+
 .blinker {
   animation-name: blinker;
   animation-iteration-count: 20;
@@ -143,8 +145,8 @@ section.jumbo {
 
 .jumbo > h1 {
     font-family: 'Roboto', sans-serif;
-    margin-bottom: 7px;
-
+    margin-bottom: 20px;
+    margin-top:20px
 }
 
 .jumboSub > img {
@@ -155,7 +157,7 @@ section.jumbo {
 }
 
 .spacer {
-    width:25%;
+    width:20%;
 }
 
 .jumboSub > h4 {
@@ -168,6 +170,27 @@ section.jumbo {
     justify-content: space-between;
     animation-name: fadeIn;
     animation-duration: 3s;
+}
+
+@media screen and (max-width: 991px) {
+  .responsive {
+      width: 95vw;
+      max-width: 400px;
+      height: auto;
+  }
+  .jumboSub {
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    margin-top:40px
+  }
+  .jumboSub h4 {
+    text-align: center;
+  }
+  .spacer {
+    margin-top:20px;
+    margin-bottom:20px;
+  }
 }
 
 @keyframes fadeIn {
@@ -206,13 +229,24 @@ html {
 .siteContent {
     margin-bottom: 10vh;
 }
+.hiddenIcons{
+  display:none;
+}
+@media screen and (max-width: 991px) {
+  .hiddenIcons{
+    display:flex;
+  }
+  .hiddenIcons > a {
+    padding-left: 20px;
+  }
+  .footer {
+    justify-content: space-around;
+  }
+}
 
 #scrollTop {
   background-color:#87cfeb;
-	-moz-border-radius:28px;
-	-webkit-border-radius:28px;
-	border-radius:28px;
-	border:1px solid #87cfeb;
+	border:1px solid #161925;
 	display:inline-block;
 	cursor:pointer;
 	color: black;
@@ -234,10 +268,6 @@ html {
   -webkit-transition: ease all 1s;
   -o-transition: ease all 1s;
   transition: ease all 1s;
-}
-
-#scrollTop:hover {
-  border:black 3px solid
 }
 
 #scrollTopContainer {
