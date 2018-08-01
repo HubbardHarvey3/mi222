@@ -24,5 +24,6 @@
 
 .aboutp > h1 {
     font-family: 'Roboto', sans-serif;
-    text-align: center
+    text-align: left;
+    margin-top:70px;
 }
