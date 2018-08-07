@@ -20,8 +20,8 @@ let mailer = require('nodemailer').createTransport({
   port: 465,
   secure: true,
   auth: {
-    user:secret.USER,
-    pass: secret.PASSWORD
+    user:process.env.USER,
+    pass: process.env.PASSWORD
   }
 })
 
