@@ -28,8 +28,8 @@ let mailer = require('nodemailer').createTransport({
 app.post ('/contact', function(req,res){
   console.log("Message Sent: " + req.body.sender+ " " + req.body.message);
   mailer.sendMail({
-    from:secret.USER,
-    to:secret.USER,
+    from:process.env.USER,
+    to:process.env.USER,
     message:req.body.message,
     subject:req.body.sender,
     html:req.body.message,
