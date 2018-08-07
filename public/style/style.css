@@ -7,6 +7,12 @@ body {
     overflow-x: hidden;
     font-size:23px;
     font-family: 'PT Sans', sans-serif;
+    background: linear-gradient(
+    to right,
+    #fff 10%,
+    #fff 50%,
+    #87ceeb 100%
+  );
 }
 
 h6, h5, h2, h3, h4, h1 {
@@ -37,7 +43,7 @@ nav {
 }
 
 nav:hover {
-    border-bottom:solid 5px #87ceeb;
+    border-bottom:solid 5px #161925;
 }
 
 .navbar {
@@ -223,7 +229,8 @@ section.jumbo {
     height: 40px;
     bottom: 0;
     left: 0;
-    background-color: skyblue
+    background-color: skyblue;
+    border-top:solid 1px #161925;
 }
 
 html {

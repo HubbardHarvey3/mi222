@@ -12,7 +12,7 @@ app.use(express.static(__dirname + '/public'))
 app.use(require('body-parser').urlencoded());
 
 
-// console.log(secret.process.env.USER)
+
 // Email Stuff
 
 let mailer = require('nodemailer').createTransport({
