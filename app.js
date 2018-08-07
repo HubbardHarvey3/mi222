@@ -1,6 +1,6 @@
 const express = require("express")
 const nodemailer = require('nodemailer')
-let secret = require('./public/js/secret')
+
 
 var app = express()
 var port = process.env.PORT || 3000
