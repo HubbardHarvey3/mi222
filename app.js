@@ -1,11 +1,46 @@
-var express = require("express")
+const express = require("express")
+const nodemailer = require('nodemailer')
+let secret = require('./public/js/secret')
 
 var app = express()
 var port = process.env.PORT || 3000
 
+
+
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + '/public'))
+app.use(require('body-parser').urlencoded());
 
+
+// console.log(secret.process.env.USER)
+// Email Stuff
+
+let mailer = require('nodemailer').createTransport({
+  host: 'smtp.zoho.com',
+  port: 465,
+  secure: true,
+  auth: {
+    user:secret.USER,
+    pass: secret.PASSWORD
+  }
+})
+
+app.post ('/contact', function(req,res){
+  console.log("Message Sent: " + req.body.sender+ " " + req.body.message);
+  mailer.sendMail({
+    from:secret.USER,
+    to:secret.USER,
+    message:req.body.message,
+    subject:req.body.sender,
+    html:req.body.message,
+  }), function(err, info){
+    if (err) return res.status(500).send(err);
+    res.json({success: true});
+  }
+  res.render('../public/views/index.ejs')
+});
+
+// ROUTES
 app.get('/', function(req, res) {
    res.render('../public/views/index.ejs')
 });
