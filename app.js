@@ -1,3 +1,4 @@
+const expressSanitizer = require('express-sanitizer')
 const express = require("express")
 const nodemailer = require('nodemailer')
 
@@ -9,9 +10,8 @@ var port = process.env.PORT || 3000
 
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + '/public'))
-app.use(require('body-parser').urlencoded());
-
-
+app.use(require('body-parser').urlencoded())
+app.use(expressSanitizer())
 
 // Email Stuff
 
@@ -25,19 +25,28 @@ let mailer = require('nodemailer').createTransport({
   }
 })
 
+app.get('/contact', function(req,res){
+  res.render('../public/views/contact.ejs', {
+    data : {},
+    errors : {}
+  })
+
+})
+
 app.post ('/contact', function(req,res){
-  console.log("Message Sent: " + req.body.sender+ " " + req.body.message);
-  mailer.sendMail({
-    from:process.env.USER,
-    to:process.env.USER,
-    message:req.body.message,
-    subject:req.body.sender,
-    html:req.body.message,
-  }), function(err, info){
-    if (err) return res.status(500).send(err);
-    res.json({success: true});
-  }
-  res.render('../public/views/index.ejs')
+    req.body.message = req.sanitize(req.body.message)
+    req.body.sender = req.sanitize(req.body.sender)
+    mailer.sendMail({
+      from:process.env.USER,
+      to:process.env.USER,
+      message:req.body.message,
+      subject:req.body.sender,
+      html:req.body.message,
+    }), function(err, info){
+      if (err) return res.status(500).send(err);
+      res.json({success: true});
+    }
+    res.render('../public/views/success.ejs')
 });
 
 // ROUTES
@@ -51,10 +60,6 @@ app.get('/statement', function(req, res) {
 
 app.get('/about', function(req, res) {
    res.render('../public/views/about.ejs')
-});
-
-app.get('/contact', function(req, res) {
-   res.render('../public/views/contact.ejs')
 });
 
 app.get('/blog', function(req, res) {

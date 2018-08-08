@@ -72,10 +72,6 @@ nav:hover {
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
     padding:5px;
-    transition: ease all .5s;
-    -webkit-transition: ease all .5s;
-    -o-transition: ease all .5s;
-    border:solid transparent 2px;
 }
 .pages h6:hover {
     transform: scale(1.1);
