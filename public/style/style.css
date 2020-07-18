@@ -55,11 +55,13 @@ nav:hover {
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   height: 13%;
 }
 
 .icons {
+  display: flex;
+  flex-direction: row;
   margin-left: 10px;
   align-items: center;
   padding-left: 5px;
@@ -78,6 +80,7 @@ nav:hover {
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
   padding: 5px;
+  padding-right: 30px;
 }
 
 .pages h6:hover {
@@ -85,10 +88,11 @@ nav:hover {
 }
 
 .pages {
-  width: 65%;
+  width: 90%;
+
   font-size: 1.5em;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   margin-right: 20px;
 }
 
@@ -108,8 +112,19 @@ nav:hover {
   display: none;
 }
 
+.donate>form {
+  width: inherit;
+  align-self: flex-start;
+}
+
+.donatefooter>form {
+  width: inherit;
+}
+
 @media screen and (max-width: 991px) {
-  .icons {
+
+  .icons,
+  .donate {
     display: none;
   }
 
@@ -279,6 +294,15 @@ html {
     font-size: 1em;
     height: 60px;
   }
+
+  /* Should appear when the hidden icons appear */
+  .donatefooter {
+    display: flex;
+    padding-top: 4px;
+    padding-left: 20px;
+  }
+
+
 }
 
 #scrollTop {
