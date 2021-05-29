@@ -10,7 +10,7 @@ var port = process.env.PORT || 3000
 
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + '/public'))
-app.use(require('body-parser').urlencoded())
+// app.use(require('body-parser').urlencoded())
 app.use(expressSanitizer())
 
 // Email Stuff
