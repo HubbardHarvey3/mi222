@@ -1,3 +1,8 @@
 node_modules/
 .vs/
 *.pem
+.terraform
+.terraform*
+terraform.tfstate.backup
+terraform.tfstate
+*.jpg

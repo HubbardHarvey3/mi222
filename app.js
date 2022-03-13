@@ -26,7 +26,7 @@ let mailer = require('nodemailer').createTransport({
 })
 
 app.get('/contact', function (req, res) {
-  res.render('../public/views/contact.ejs', {
+  res.render('../public/views/contact.html', {
     data: {},
     errors: {}
   })
@@ -46,28 +46,28 @@ app.post('/contact', function (req, res) {
     if (err) return res.status(500).send(err);
     res.json({ success: true });
   }
-  res.render('../public/views/success.ejs')
+  res.render('../public/views/success.html')
 });
 
 // ROUTES
 app.get('/', function (req, res) {
-  res.render('../public/views/index.ejs')
+  res.render('../public/views/index.html')
 });
 
 app.get('/statement', function (req, res) {
-  res.render('../public/views/SoF.ejs')
+  res.render('../public/views/SoF.html')
 });
 
 app.get('/about', function (req, res) {
-  res.render('../public/views/about.ejs')
+  res.render('../public/viewshttps://s3.amazonaws.com/222commission.org/views/about.html')
 });
 
 app.get('/blog', function (req, res) {
-  res.render('../public/views/blog.ejs')
+  res.render('../public/viewshttps://s3.amazonaws.com/222commission.org/views/blog.html')
 });
 
 app.get('/radio', function (req, res) {
-  res.render('../public/views/radio.ejs')
+  res.render('../public/views/radio.html')
 });
 
 app.listen(port, function () {
